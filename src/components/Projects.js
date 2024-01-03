@@ -5,7 +5,7 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
-import projImg6 from "../assets/img/project-img6.png";
+import projImg7 from "../assets/img/project-img7.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -35,6 +35,7 @@ export const Projects = () => {
       title: "KÁAPEJ COFFEE",
       description: "Design",
       imgUrl: projImg4,
+      extLink:"https://www.figma.com/proto/w4PsCUyrrnzy3EsiwdMzQq/Coffee-App?type=design&node-id=31-1021&t=Ju5MPuYKyKiFuwYn-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=31%3A1021&mode=design"
     },
     {
       title: "Be^nu",
@@ -42,11 +43,6 @@ export const Projects = () => {
       imgUrl: projImg5,
       extLink:"https://www.figma.com/proto/gNOGVwwSGig37SEg0VwJl0/Be'nu?type=design&node-id=1-1613&t=LFx8LvSCzZ83Balj-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A1613&show-proto-sidebar=1"
     },
-    {
-      title: "BurnMeal",
-      description: "Design",
-      imgUrl: projImg6,
-    }
   ];
 
   const projectsC = [
@@ -55,7 +51,14 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: projImg1,
       extLink:"https://www.agentxia.com/"
+    },
+    {
+      title: "Walthome",
+      description: "Development",
+      imgUrl: projImg7,
+      extLink:"https://eliseosh5.github.io/Walthome/"
     }
+
   ];
 
   return (

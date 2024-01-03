@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -59,7 +58,6 @@ export const Banner = () => {
                 <h1>{`Hi! I'm Eliseo Salinas`}</h1>
                 <h1><span className="txt-rotate" dataPeriod="500" data-rotate='[ "Web Developer", "Web Designer", "UX/UI Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I am a passionate UX/UI designer and Product Designer with over 3 years of experience in designing and developing websites and mobile applications focused on functionality and user experiences.</p>
-                  <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>

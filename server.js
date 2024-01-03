@@ -12,15 +12,16 @@ app.listen(5000, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
+const transporter = nodemailer.createTransport({
+  host: 'smtp.ethereal.email',
+  port: 587,
   auth: {
-    user: "jersatest@gmail.com",
-    pass: "mexzhbbadibbeezt"
-  },
+      user: 'tomasa.price@ethereal.email',
+      pass: 'jEQsKQ6CvHccGUW6UE'
+  }
 });
 
-contactEmail.verify((error) => {
+transporter.verify((error) => {
   if (error) {
     console.log(error);
   } else {
@@ -28,21 +29,21 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/Contact", (req, res) => {
+router.post("/contact", (req, res) => {
   const name = req.body.firstName + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
   const mail = {
     from: name,
-    to: "jersatest@gmail.com",
+    to: "tomasa.price@ethereal.email",
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
            <p>Phone: ${phone}</p>
            <p>Message: ${message}</p>`,
   };
-  contactEmail.sendMail(mail, (error) => {
+  transporter.sendMail(mail, (error) => {
     if (error) {
       res.json(error);
     } else {

@@ -44,7 +44,7 @@ export const NavBar = () => {
               <div className="social-icon">
                 <a href="https://www.linkedin.com/in/eliseosh5/" target=" _blank"><img src={navIcon1} alt="" /></a>
               </div>
-                <button className="vvd"><span>Let's Connect</span></button>
+                <button className="vvd"><Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Let’s Connect</Nav.Link></button>
             </span>
           </Navbar.Collapse>
         </Container>
